@@ -4,11 +4,14 @@ class Proyecto(models.Model):
     """
     Representa un proyecto en la base de datos.
 
-    Attributes:
-        nombre (str): El nombre del proyecto.
-        project_manager (str): El nombre del project manager.
-        descripcion (str): La descripción del proyecto.
-        desarrolladores (ManyToManyField): Relación con los desarrolladores involucrados en el proyecto.
+    :param nombre: El nombre del proyecto.
+    :type nombre: str
+    :param project_manager: El nombre del project manager.
+    :type project_manager: str
+    :param descripcion: La descripción del proyecto.
+    :type descripcion: str
+    :param desarrolladores: Relación con los desarrolladores involucrados en el proyecto.
+    :type desarrolladores: ManyToManyField
     """
     nombre = models.CharField(max_length=100)
     project_manager = models.CharField(max_length=100)
@@ -19,8 +22,8 @@ class Proyecto(models.Model):
         """
         Retorna una representación legible en cadena del objeto Proyecto.
 
-        Returns:
-            str: Una cadena con el nombre del proyecto.
+        :return: Una cadena con el nombre del proyecto.
+        :rtype: str
         """
         return self.nombre
 
@@ -28,9 +31,10 @@ class Desarrollador(models.Model):
     """
     Representa un desarrollador en la base de datos.
 
-    Attributes:
-        nombre (str): El nombre del desarrollador.
-        apellido (str): El apellido del desarrollador.
+    :param nombre: El nombre del desarrollador.
+    :type nombre: str
+    :param apellido: El apellido del desarrollador.
+    :type apellido: str
     """
     nombre = models.CharField(max_length=100)
     apellido = models.CharField(max_length=100)
@@ -39,7 +43,7 @@ class Desarrollador(models.Model):
         """
         Retorna una representación legible en cadena del objeto Desarrollador.
 
-        Returns:
-            str: Una cadena con el nombre y apellido del desarrollador.
+        :return: Una cadena con el nombre y apellido del desarrollador.
+        :rtype: str
         """
         return f'{self.nombre} {self.apellido}'
