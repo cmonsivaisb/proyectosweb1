@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Crear Proyecto</title>
+    <!-- Agrega la referencia a Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">Crear Proyecto</h1>
+        <!-- Tu formulario de creación de proyectos con Bootstrap aquí -->
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-primary mt-3">Guardar Proyecto</button>
+        </form>
+        <a class="btn btn-secondary mt-3" href="{% url 'lista_proyectos' %}">Volver a la lista de proyectos</a>
+    </div>
+</body>
+</html>
