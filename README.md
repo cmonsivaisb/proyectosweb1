@@ -20,7 +20,7 @@ Antes de comenzar, asegúrate de tener instalados los siguientes requisitos:
    Clona este repositorio en tu máquina local utilizando Git:
 
    ```bash
-   git clone https://github.com/tuusuario/nombre-del-repo.git
+   git clone https://github.com/cmonsivaisb/proyectosweb1.git
    ```
 
 2. **Crea un entorno virtual (opcional)**
