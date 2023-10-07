@@ -88,3 +88,22 @@ Antes de comenzar, asegúrate de tener instalados los siguientes requisitos:
 
    El proyecto estará disponible en [http://localhost:8000/](http://localhost:8000/).
 
+8. **OPCIONAL> Agregar usuarios y desarolladores**
+
+   Opcionalmente se pueden agregar los usuarios y desarolladores mediante la direccion /admin o
+   ejecutando python manage.py shell y copiando los siguientes comantos
+
+    ```
+   from django.contrib.auth.models import User
+   from project1.models import Desarrollador
+   
+   # Agregar desarrolladores
+   desarrollador1 = Desarrollador.objects.create(nombre="Nombre1", apellido="Apellido1")
+   desarrollador2 = Desarrollador.objects.create(nombre="Nombre2", apellido="Apellido2")
+   
+   # Agregar un usuario de tipo visor (sin privilegios de admin)
+   usuario_visor = User.objects.create_user(username="usuario_visor", password="contraseña_visor")
+   usuario_visor.save()
+    ```
+
+
