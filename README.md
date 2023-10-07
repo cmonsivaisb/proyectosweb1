@@ -80,6 +80,11 @@ Antes de comenzar, asegúrate de tener instalados los siguientes requisitos:
 
 7. **Ejecuta el servidor de desarrollo**
 
+   Crea un superusuario (opcional)
+   Si deseas acceder al panel de administración de Django, puedes crear un superusuario:
+   ```bash
+   python manage.py createsuperuser
+   ```
    Inicia el servidor de desarrollo de Django:
 
    ```bash
