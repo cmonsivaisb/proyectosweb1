@@ -59,7 +59,7 @@ DATABASES = {
 }
 
 '''
-PARA MYSQL
+PARA MYSQL 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
@@ -106,5 +106,7 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGIN_REDIRECT_URL = ''  # Nombre de la URL a la que se redirige después del inicio de sesión
 
 # Otras configuraciones específicas de tu proyecto
