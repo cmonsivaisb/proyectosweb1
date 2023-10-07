@@ -4,7 +4,7 @@ from rest_framework import permissions
 from django.contrib.auth import views as auth_views
 
 urlpatterns = [
-    path('login/', auth_views.LoginView.as_view(template_name='registration/login.html'), name='login'),
+    path('accounts/login/', auth_views.LoginView.as_view(), name='login'),
     path('', views.lista_proyectos, name='lista_proyectos'),
     path('proyecto/<int:proyecto_id>/', views.detalle_proyecto, name='detalle_proyecto'),
     path('proyecto/crear/', views.crear_proyecto, name='crear_proyecto'),
